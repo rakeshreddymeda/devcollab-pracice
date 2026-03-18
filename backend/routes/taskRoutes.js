@@ -6,8 +6,8 @@ const { createTask, updateTaskStatus, getTasks, deleteTask } = require("../contr
 const router = express.Router();
 
 router.post("/", auth, createTask);
-router.pub("/:id", auth, updateTaskStatus);
-router.get("/", auth, getTasks);
+router.put("/:id", auth, updateTaskStatus);
+router.get("/:projectId", auth, getTasks);
 router.delete("/:id", auth, deleteTask);
 
 module.exports = router;
